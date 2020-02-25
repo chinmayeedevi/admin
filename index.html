@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="UTF-8">
+      <meta content="width=device-width, initial-scale=1" name="viewport" />
+      <title>Ekagga Technology</title>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body>
+      <div class="wrapper">
+         <nav class="header-responsive">
+            <header>
+               <span><img src="logo.png"></span>
+               <a></a>
+            </header>
+            <ul>
+               <li><a>Dashboard</a></li>
+               <li><a class="active">Devices</a></li>
+               <li><a>My Viz</a></li>
+               <li><a>Rules</a></li>
+               <li><a>Configuration</a></li>
+               <li><a>Key Management</a></li>
+               <li><a>Add Devices</a></li>
+               <li><a>User Management</a></li>
+               <li><a>Software Management</a></li>
+               <li><a>Support</a></li>
+            </ul>
+         </nav>
+         <nav class="sidebar-res">
+            <div class="container">
+               <input id="responsive-menu" type="checkbox">
+               <label for="responsive-menu"> <span id="menu-icon"></span></label>
+               <div id="overlay"></div>
+               <ul>
+                  <li><a>Dashboard</a></li>
+                  <li><a class="active">Devices</a></li>
+                  <li><a>My Viz</a></li>
+                  <li><a>Rules</a></li>
+                  <li><a>Configuration</a></li>
+                  <li><a>Key Management</a></li>
+                  <li><a>Add Devices</a></li>
+                  <li><a>User Management</a></li>
+                  <li><a>Software Management</a></li>
+                  <li><a>Support</a></li>
+               </ul>
+            </div>
+         </nav>
+         <main>
+            <h1><span>Plan Type Free</span> <span class="washim-text"><i class="fa fa-search washim-left" aria-hidden="true"></i> Washim Akram <i class="fa fa-user-circle-o washim-right" aria-hidden="true"></i> </span></h1>
+            <div class="flex-grid">
+               <div>
+                  <h2>TOTAL DEVICES</h2>
+                  <p class="total"><span><i class="fa fa-filter" aria-hidden="true"></i></span>
+                     <span class="total-second">18</span>
+                  </p>
+               </div>
+               <div>
+                  <h2>ONLINE</h2>
+                  <p class="total"><span><i class="fa fa-paperclip" aria-hidden="true"></i></span>
+                     <span class="total-second">18</span>
+                  </p>
+               </div>
+               <div>
+                  <h2>OFFLINE</h2>
+                  <p class="total"><span><i class="fa fa-gg" aria-hidden="true"></i></span>
+                     <span class="total-second">0</span>
+                  </p>
+               </div>
+               <div>
+                  <h2>ALERTS</h2>
+                  <p class="total"><span><i class="fa fa-fire" aria-hidden="true"></i></span>
+                     <span class="total-second">0</span>
+                  </p>
+               </div>
+            </div>
+            <button class="hide">Device List</button>
+            <button class="show">Tree View</button>
+            <br>
+            <div class="1sttab">
+               <table>
+                  <thead>
+                     <tr class="icon">
+                        <th scope="col">STATE<i class="fa fa-filter" aria-hidden="true"></i></th>
+                        <th scope="col">NAME<i class="fa fa-filter" aria-hidden="true"></i></th>
+                        <th scope="col">SERIAL NO<i class="fa fa-filter" aria-hidden="true"></i></th>
+                        <th scope="col">IMEI<i class="fa fa-filter" aria-hidden="true"></i></th>
+                        <th scope="col">ALERT<i class="fa fa-filter" aria-hidden="true"></i></th>
+                        <th scope="col">HEALTH<i class="fa fa-filter" aria-hidden="true"></i></th>
+                        <th scope="col">REG DATE<i class="fa fa-filter" aria-hidden="true"></i></th>
+                        <th scope="col">LAST REPORTED<i class="fa fa-filter" aria-hidden="true"></i></th>
+                     </tr>
+                  </thead>
+                  <tbody id="demo">
+                  </tbody>
+               </table>
+            </div>
+         </main>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script>
+         $(document).ready(function(){
+           $(".hide").click(function(){
+             $(".2ndtab").hide();
+             $(".1sttab").show();
+           });
+           $(".show").click(function(){
+             $(".1sttab").hide();
+             $(".2ndtab").show();
+           });
+         });
+      </script>
+      <script>
+         $(document).ready(function(){ 
+          var user = [
+         {
+         "id": 774,
+         "attributeId": 65,
+         "value": "25",
+         "capturedTimestamp": "11-02-2020 09:54:21 +0530",
+         "savedTimestamp": "11-02-2020 09:53:08 +0530"
+         },
+         {
+         "id": 775,
+         "attributeId": 65,
+         "value": "26",
+         "capturedTimestamp": "11-02-2020 10:01:21 +0530",
+         "savedTimestamp": "11-02-2020 10:06:33 +0530"
+         },
+         {
+         "id": 1219,
+         "attributeId": 65,
+         "value": "30",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:20 +0530"
+         },
+         {
+         "id": 1220,
+         "attributeId": 65,
+         "value": "32",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:28 +0530"
+         },
+         {
+         "id": 1221,
+         "attributeId": 65,
+         "value": "2",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:32 +0530"
+         },
+         {
+         "id": 1222,
+         "attributeId": 65,
+         "value": "23",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:36 +0530"
+         },
+         {
+         "id": 1223,
+         "attributeId": 65,
+         "value": "23",
+         "capturedTimestamp": "12-02-2020 11:02:21 +0530",
+         "savedTimestamp": "18-02-2020 10:35:41 +0530"
+         }  ,  {
+         "id": 1220,
+         "attributeId": 65,
+         "value": "32",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:28 +0530"
+         },
+         {
+         "id": 1221,
+         "attributeId": 65,
+         "value": "2",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:32 +0530"
+         },
+         {
+         "id": 1222,
+         "attributeId": 65,
+         "value": "23",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:36 +0530"
+         },    {
+         "id": 1220,
+         "attributeId": 65,
+         "value": "32",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:28 +0530"
+         },
+         {
+         "id": 1221,
+         "attributeId": 65,
+         "value": "2",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:32 +0530"
+         },
+         {
+         "id": 1222,
+         "attributeId": 65,
+         "value": "23",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:36 +0530"
+         },    {
+         "id": 1220,
+         "attributeId": 65,
+         "value": "32",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:28 +0530"
+         },
+         {
+         "id": 1221,
+         "attributeId": 65,
+         "value": "2",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:32 +0530"
+         },
+         {
+         "id": 1222,
+         "attributeId": 65,
+         "value": "23",
+         "capturedTimestamp": "12-02-2020 10:01:21 +0530",
+         "savedTimestamp": "12-02-2020 19:07:36 +0530"
+         }
+         ]
+         
+          if (user.length > 0) {
+             $("#demo").html('');
+              $.each(user, function(key,value){
+               //console.log();
+               $("#demo").append('<tr>'+
+             '<td  data-label="STATE"><i class="fa fa-paperclip tfont" aria-hidden="true"></i></td>'+
+             '<td data-label="NAME">'+value.attributeId+'</td>'+
+             '<td data-label="SERIAL NO">'+value.id+'</td>'+
+            ' <td data-label="IMEI">'+value.value+' </td>'+
+            ' <td data-label="ALERT"><i class="fa fa-calendar tfont" aria-hidden="true"></i></td>'+
+             '<td data-label="HEALTH"><i class="fa fa-smile-o tfont"></i></td>'+
+             '<td data-label="REG DATE">'+value.capturedTimestamp+'</td>'+
+            ' <td data-label="LAST REPORTED">'+value.savedTimestamp+'</td>'+
+          '</tr>');
+              });
+          }else{
+             $("#demo").html('<tr><td>No Data Found</td></tr>');
+          }
+           
+         });
+      </script>
+   </body>
+</html>
